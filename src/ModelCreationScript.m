@@ -1,7 +1,5 @@
 % Coded by GaoHang / YuXiaoyang
 % Soft Updata Log
-% 200624:更新Autosar设置
-% 200630:重写了所需调用的函数
 % on matlab R2018b
 % 相关参数配置
 % ----------------------------------------%
