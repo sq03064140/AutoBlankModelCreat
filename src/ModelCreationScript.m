@@ -10,7 +10,7 @@
 eval('clear all');
 close all;
 clc;
-addpath('D:\BaiduNetdiskDownload\MatlabWorkSpace\Project\lib'); % 工具函数目录
+addpath('lib'); % 工具函数目录
 run Rte_Type; % Load Rte_Type to WorkSpace
 
 PARAM_SET_AUTO = 1; % 自动设置I/O模块数据类型和长度(0则不设置，后期手动配置，1则根据excel生成）
@@ -173,6 +173,8 @@ fprintf('Log:Simulink设置完成，剩余步骤需手动设置Autosar参数即可\n');
 fprintf('Log:开始配置Autosar部分内容\n');
 autosar.api.delete(module_name);    % 删除现在的Autosar配置
 fprintf('\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b5.正在自动生成autosar配置，大约需要1~2分钟...');
+
+%%
 autosar.api.create(module_name,'default');   % 创建Atuosar persepective 
 fprintf('\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b5.正在自动调整autosar配置...');
 % autosar.api.create('JABS');   % 如创建模型后对接口有修改或希望删除已配置过的环境可用该命令进行删除
